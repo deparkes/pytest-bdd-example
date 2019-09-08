@@ -10,3 +10,9 @@ Scenario Outline: A simple greeter
     | George |
     | Sarah |
     | Tim |
+
+
+Scenario: No name provided
+  Given a Greeter
+  When I don't provide a name
+  Then the greeter says "Please provide a name"

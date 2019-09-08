@@ -20,3 +20,11 @@ def i_give_my_name_as(greeter, name):
 @then(parsers.parse('The greeter says Hello "{name}"'))
 def the_greeter_says_hello(greeter, name):
     assert greeter.greet() ==  'Hello '+name
+
+@when(parsers.parse("I don't provide a name"))
+def no_name_provided(greeter):
+    pass
+
+@then(parsers.parse('the greeter says "{message}"'))
+def please_provide_a_name(greeter, message):
+    assert greeter.greet() == message
