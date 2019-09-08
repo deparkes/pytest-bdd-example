@@ -1,5 +1,7 @@
 Feature: Greeter
-   Class to greet the user
+   As a user
+   I want to be greeted nicely
+   So that I feel welcomed.
 
 Scenario Outline: A simple greeter
     Given a Greeter
